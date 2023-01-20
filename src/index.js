@@ -1,1 +1,3 @@
-console.log('Yes');
+import loadPage from './page-load';
+
+loadPage();
