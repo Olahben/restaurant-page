@@ -6,7 +6,7 @@ const loadPage = () => {
   link.setAttribute('type', 'text/css');
   link.setAttribute(
     'href',
-    'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'
+    'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap',
   );
   document.head.appendChild(link);
 
