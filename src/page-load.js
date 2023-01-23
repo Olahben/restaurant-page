@@ -16,7 +16,8 @@ const loadPage = () => {
   headerName.classList.add('header-name');
   headerName.textContent = 'Margharita';
   header.append(headerName);
-  header.style.backgroundColor = 'black';
+
+  header.style.backgroundColor = 'black'; // Style hader and headerName
   header.style.opacity = '0.2';
   headerName.style.color = 'white';
   headerName.style.fontFamily = 'Abril Fatface';
@@ -28,10 +29,16 @@ const loadPage = () => {
 
   const home = document.createElement('span');
   home.textContent = 'Home';
-  nav.style.color = 'white';
+
+  nav.style.color = 'white'; // Style nav text
   nav.style.color = 'white';
   nav.style.fontFamily = 'Abril Fatface';
   nav.style.fontWeight = '400';
+
+  header.style.display = 'flex'; // Position header elements
+  header.style.flexWrap = 'wrap';
+  header.style.flexDirection = 'column';
+  header.style.alignContent = 'center';
 
   const navMenu = document.createElement('span');
   navMenu.textContent = 'Menu';
