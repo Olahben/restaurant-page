@@ -29,6 +29,9 @@ const loadPage = () => {
   const home = document.createElement('span');
   home.textContent = 'Home';
   nav.style.color = 'white';
+  nav.style.color = 'white';
+  nav.style.fontFamily = 'Abril Fatface';
+  nav.style.fontWeight = '400';
 
   const navMenu = document.createElement('span');
   navMenu.textContent = 'Menu';
