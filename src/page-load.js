@@ -11,6 +11,22 @@ const loadPage = () => {
   header.style.opacity = '0.2';
   headerName.style.color = 'white';
 
+  const nav = document.createElement('nav');
+  nav.classList.add('nav');
+  header.appendChild(nav);
+
+  const home = document.createElement('span');
+  home.textContent = 'Home';
+  nav.style.color = 'white';
+
+  const navMenu = document.createElement('span');
+  navMenu.textContent = 'Menu';
+
+  const about = document.createElement('span');
+  about.textContent = 'About';
+
+  nav.append(home, navMenu, about);
+
   const image = document.createElement('img');
   image.src = 'https://source.unsplash.com/random/300x300';
 
