@@ -4,7 +4,10 @@ const loadPage = () => {
   const link = document.createElement('link');
   link.setAttribute('rel', 'stylesheet');
   link.setAttribute('type', 'text/css');
-  link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  link.setAttribute(
+    'href',
+    'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'
+  );
   document.head.appendChild(link);
 
   const header = document.createElement('div');
@@ -17,6 +20,7 @@ const loadPage = () => {
   header.style.opacity = '0.2';
   headerName.style.color = 'white';
   headerName.style.fontFamily = 'Abril Fatface';
+  headerName.style.fontWeight = '400';
 
   const nav = document.createElement('nav');
   nav.classList.add('nav');
