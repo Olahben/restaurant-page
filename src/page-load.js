@@ -1,6 +1,12 @@
 const loadPage = () => {
   const content = document.querySelector('#content');
 
+  const link = document.createElement('link');
+  link.setAttribute('rel', 'stylesheet');
+  link.setAttribute('type', 'text/css');
+  link.setAttribute('href', 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  document.head.appendChild(link);
+
   const header = document.createElement('div');
   header.setAttribute('id', 'header');
   const headerName = document.createElement('h1');
@@ -10,6 +16,7 @@ const loadPage = () => {
   header.style.backgroundColor = 'black';
   header.style.opacity = '0.2';
   headerName.style.color = 'white';
+  headerName.style.fontFamily = 'Abril Fatface';
 
   const nav = document.createElement('nav');
   nav.classList.add('nav');
