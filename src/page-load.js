@@ -7,6 +7,9 @@ const loadPage = () => {
   headerName.classList.add('header-name');
   headerName.textContent = 'Margharita';
   header.append(headerName);
+  header.style.backgroundColor = 'black';
+  header.style.opacity = '0.2';
+  headerName.style.color = 'white';
 
   const image = document.createElement('img');
   image.src = 'https://source.unsplash.com/random/300x300';
