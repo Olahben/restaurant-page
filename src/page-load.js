@@ -34,6 +34,7 @@ const loadPage = () => {
   nav.style.color = 'white';
   nav.style.fontFamily = 'Abril Fatface';
   nav.style.fontWeight = '400';
+  nav.style.fontSize = '130%';
 
   header.style.display = 'flex'; // Position header elements
   header.style.flexWrap = 'wrap';
@@ -42,6 +43,7 @@ const loadPage = () => {
 
   nav.style.display = 'flex'; // Position nav elements
   nav.style.gap = '10%';
+  nav.style.marginLeft = '-1%';
 
   const navMenu = document.createElement('span');
   navMenu.textContent = 'Menu';
