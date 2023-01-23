@@ -40,6 +40,9 @@ const loadPage = () => {
   header.style.flexDirection = 'column';
   header.style.alignContent = 'center';
 
+  nav.style.display = 'flex'; // Position nav elements
+  nav.style.gap = '10%';
+
   const navMenu = document.createElement('span');
   navMenu.textContent = 'Menu';
 
