@@ -1,4 +1,6 @@
 const loadMenu = () => {
+  const content = document.querySelector('#content');
+
   const menu = document.createElement('div');
   menu.setAttribute('id', 'menu');
 
@@ -45,6 +47,7 @@ const loadMenu = () => {
   meal6.appendChild(meal6Name);
 
   menu.append(meal1, meal2, meal3, meal4, meal5, meal6);
+  content.append(menu);
 };
 
 export default { loadMenu };
