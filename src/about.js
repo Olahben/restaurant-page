@@ -18,6 +18,9 @@ const loadAbout = () => {
   const image = document.createElement('img');
   image.src = 'https://source.unsplash.com/random/200x250';
 
+  infoWrapper.style.backgroundColor = '#cbcbcb';
+  infoWrapper.style.color = 'white';
+
   wrapper.append(infoWrapper, address, telNumber, image);
   content.append(wrapper);
 };
