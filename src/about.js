@@ -1,5 +1,5 @@
 const loadAbout = () => {
-  const content = document.querySelector('#div');
+  const content = document.querySelector('#content');
 
   const wrapper = document.createElement('div');
   wrapper.setAttribute('id', 'about-wrapper');
