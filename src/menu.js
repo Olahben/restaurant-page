@@ -53,4 +53,4 @@ const loadMenu = () => {
   content.append(wrapper);
 };
 
-export default { loadMenu };
+export default loadMenu;
