@@ -28,6 +28,7 @@ const loadPage = () => {
   header.appendChild(nav);
 
   const home = document.createElement('span');
+  home.classList.add('tab');
   home.textContent = 'Home';
 
   nav.style.color = 'white'; // Style nav text
@@ -46,9 +47,11 @@ const loadPage = () => {
   nav.style.marginLeft = '-1%';
 
   const navMenu = document.createElement('span');
+  navMenu.classList.add('tab');
   navMenu.textContent = 'Menu';
 
   const about = document.createElement('span');
+  about.classList.add('tab');
   about.textContent = 'About';
 
   nav.append(home, navMenu, about);
