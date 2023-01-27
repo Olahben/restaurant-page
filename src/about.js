@@ -1,11 +1,11 @@
 const loadAbout = () => {
   const content = document.querySelector('#content');
 
-  const wrapper = document.createElement('div');
-  wrapper.setAttribute('id', 'about-wrapper');
+  const aboutContent = document.createElement('div');
+  aboutContent.setAttribute('id', 'about-content');
 
-  const infoWrapper = document.createElement('div');
-  infoWrapper.classList.add('info-wrapper');
+  const infoContent = document.createElement('div');
+  infoContent.classList.add('info-aboutContent');
 
   const address = document.createElement('p');
   address.textContent = 'Storgata 100A';
@@ -18,11 +18,11 @@ const loadAbout = () => {
   const image = document.createElement('img');
   image.src = 'https://source.unsplash.com/random/200x250';
 
-  infoWrapper.style.backgroundColor = '#cbcbcb';
-  infoWrapper.style.color = 'white';
+  infoContent.style.backgroundColor = '#cbcbcb';
+  infoContent.style.color = 'white';
 
-  wrapper.append(infoWrapper, address, telNumber, image);
-  content.append(wrapper);
+  aboutContent.append(infoContent, address, telNumber, image);
+  content.append(aboutContent);
 };
 
 export default loadAbout;
