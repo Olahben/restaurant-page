@@ -1,7 +1,7 @@
 const loadMenu = () => {
   const content = document.querySelector('#content');
-  const wrapper = document.createElement('div');
-  wrapper.setAttribute('id', 'menu-wrapper');
+  const menuContent = document.createElement('div');
+  menuContent.setAttribute('id', 'menu-content');
 
   const menu = document.createElement('div');
   menu.setAttribute('id', 'menu');
@@ -49,8 +49,8 @@ const loadMenu = () => {
   meal6.appendChild(meal6Name);
 
   menu.append(meal1, meal2, meal3, meal4, meal5, meal6);
-  wrapper.append(menu);
-  content.append(wrapper);
+  menuContent.append(menu);
+  content.append(menuContent);
 };
 
 export default loadMenu;
