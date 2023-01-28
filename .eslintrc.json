@@ -13,6 +13,7 @@
     "no-console": "off",
     "no-plusplus": "off",
     "operator-linebreak": "off",
-    "no-param-reassign":"off"
+    "no-param-reassign":"off",
+    "consistent-return":"off"
   }
 }
