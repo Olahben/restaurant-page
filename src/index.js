@@ -20,12 +20,21 @@ const switchTab = (() => {
   const setCurrentTab = (tab) => {
     if (tab === menuContent) {
       loadMenu();
+      homeContent.style.display = 'none';
+      aboutContent.style.display = 'none';
+      currentTab = 'Menu';
     }
     if (tab === aboutContent) {
       loadAbout();
+      homeContent.style.display = 'none';
+      menuContent.style.display = 'none';
+      currentTab = 'About';
     }
     if (tab === homeContent) {
-      loadPage();
+      homeContent.style.display = 'block';
+      menuContent.style.display = 'none';
+      aboutContent.style.display = 'none';
+      currentTab = 'Home';
     }
 
     tab.style.display = 'block';
