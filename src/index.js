@@ -17,6 +17,14 @@ const switchTab = (() => {
     homeContent.style.display = 'none';
   };
 
+  const removeMenuContent = () => {
+    menuContent.style.display = 'none';
+  };
+
+  const removeAboutContent = () => {
+    aboutContent.style.display = 'none';
+  };
+
   const setCurrentTab = (tab) => {
     if (tab === menuContent) {
       loadMenu();
@@ -45,10 +53,22 @@ const switchTab = (() => {
       if (currentTab === 'Home' && tab.textContent === 'Home') {
         return 1;
       }
+      if (currentTab === 'Menu' && tab.textContent === 'Menu') {
+        return 1;
+      }
+      if (currentTab === 'About' && tab.textContent === 'About') {
+        return 1;
+      }
       if (currentTab === 'Home' && tab.textContent === 'Menu') {
-        currentTab = 'Menu';
         removeHomeContent();
         setCurrentTab(menuContent);
+      }
+      if (currentTab === 'Home' && tab.textContent === 'About') {
+        removeHomeContent();
+        setCurrentTab(aboutContent);
+      }
+      if (currentTab === 'Menu' && tab.textContent === 'Home') {
+        setCurrentTab(homeContent);
       }
     });
   });
