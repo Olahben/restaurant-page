@@ -59,8 +59,6 @@ const switchTab = (() => {
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      console.log(currentTab);
-      console.log(tab.textContent);
       if (currentTab === 'Home' && tab.textContent === 'Home') {
         return 1;
       }
