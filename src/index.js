@@ -10,46 +10,57 @@ const switchTab = (() => {
   const tabs = document.querySelectorAll('.tab');
   let currentTab = 'Home';
   const homeContent = document.querySelector('#home-content');
-  const menuContent = document.querySelector('#menu-content');
-  const aboutContent = document.querySelector('#about-content');
+
+  let menuFlag = false;
+  let aboutFlag = false;
 
   const removeHomeContent = () => {
     homeContent.style.display = 'none';
   };
 
   const removeMenuContent = () => {
+    const menuContent = document.querySelector('#menu-content');
     menuContent.style.display = 'none';
   };
 
   const removeAboutContent = () => {
+    const aboutContent = document.querySelector('#about-content');
     aboutContent.style.display = 'none';
   };
 
-  const setCurrentTab = (tab) => {
-    if (tab === menuContent) {
-      loadMenu();
-      homeContent.style.display = 'none';
-      aboutContent.style.display = 'none';
+  const setMenuTab = () => {
+    if (menuFlag) {
+      const menuContent = document.querySelector('#menu-content');
+      menuContent.style.display = 'block';
       currentTab = 'Menu';
+      return 1;
     }
-    if (tab === aboutContent) {
-      loadAbout();
-      homeContent.style.display = 'none';
-      menuContent.style.display = 'none';
-      currentTab = 'About';
-    }
-    if (tab === homeContent) {
-      homeContent.style.display = 'block';
-      menuContent.style.display = 'none';
-      aboutContent.style.display = 'none';
-      currentTab = 'Home';
-    }
+    menuFlag = true;
+    loadMenu();
+    currentTab = 'Menu';
+  };
 
-    tab.style.display = 'block';
+  const setAboutTab = () => {
+    if (aboutFlag) {
+      const aboutContent = document.querySelector('#about-content');
+      aboutContent.style.display = 'block';
+      currentTab = 'About';
+      return 1;
+    }
+    aboutFlag = true;
+    loadAbout();
+    currentTab = 'About';
+  };
+
+  const setHomeTab = () => {
+    homeContent.style.display = 'block';
+    currentTab = 'Home';
   };
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
+      console.log(currentTab);
+      console.log(tab.textContent);
       if (currentTab === 'Home' && tab.textContent === 'Home') {
         return 1;
       }
@@ -61,14 +72,33 @@ const switchTab = (() => {
       }
       if (currentTab === 'Home' && tab.textContent === 'Menu') {
         removeHomeContent();
-        setCurrentTab(menuContent);
+        setMenuTab();
+        return 1;
       }
       if (currentTab === 'Home' && tab.textContent === 'About') {
         removeHomeContent();
-        setCurrentTab(aboutContent);
+        setAboutTab();
+        return 1;
       }
       if (currentTab === 'Menu' && tab.textContent === 'Home') {
-        setCurrentTab(homeContent);
+        removeMenuContent();
+        setHomeTab();
+        return 1;
+      }
+      if (currentTab === 'Menu' && tab.textContent === 'About') {
+        removeMenuContent();
+        setAboutTab();
+        return 1;
+      }
+      if (currentTab === 'About' && tab.textContent === 'Home') {
+        removeAboutContent();
+        setHomeTab();
+        return 1;
+      }
+      if (currentTab === 'About' && tab.textContent === 'Menu') {
+        removeAboutContent();
+        setMenuTab();
+        return 1;
       }
     });
   });
