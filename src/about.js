@@ -20,6 +20,7 @@ const loadAbout = () => {
 
   infoContent.style.backgroundColor = '#cbcbcb';
   infoContent.style.color = 'white';
+  infoContent.style.fontFamily = 'Abril Fatface';
 
   aboutContent.append(infoContent);
   infoContent.append(address, telNumber, image);
