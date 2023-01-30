@@ -21,7 +21,8 @@ const loadAbout = () => {
   infoContent.style.backgroundColor = '#cbcbcb';
   infoContent.style.color = 'white';
 
-  aboutContent.append(infoContent, address, telNumber, image);
+  aboutContent.append(infoContent);
+  infoContent.append(address, telNumber, image);
   content.append(aboutContent);
 };
 
