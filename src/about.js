@@ -15,9 +15,6 @@ const loadAbout = () => {
   telNumber.textContent = 'Contact us at : +0 77 166 1223';
   telNumber.classList.add('about-para');
 
-  const image = document.createElement('img');
-  image.src = 'https://source.unsplash.com/random/200x250';
-
   infoContent.style.backgroundColor = '#cbcbcb';
   infoContent.style.color = 'white';
   infoContent.style.fontFamily = 'Abril Fatface';
@@ -26,9 +23,10 @@ const loadAbout = () => {
   infoContent.style.flexDirection = 'column';
   infoContent.style.alignContent = 'center';
   infoContent.style.flexWrap = 'wrap';
+  infoContent.style.backgroundImage = "url('https://source.unsplash.com/random/1000x1500')";
 
   aboutContent.append(infoContent);
-  infoContent.append(address, telNumber, image);
+  infoContent.append(address, telNumber);
   content.append(aboutContent);
 };
 
