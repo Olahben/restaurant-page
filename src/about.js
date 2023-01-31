@@ -23,7 +23,7 @@ const loadAbout = () => {
   infoContent.style.flexDirection = 'column';
   infoContent.style.alignContent = 'center';
   infoContent.style.flexWrap = 'wrap';
-  infoContent.style.backgroundImage = "url('https://source.unsplash.com/random/1000x1500')";
+  infoContent.style.backgroundImage = "url('https://source.unsplash.com/random/2000x1500')";
 
   aboutContent.append(infoContent);
   infoContent.append(address, telNumber);
