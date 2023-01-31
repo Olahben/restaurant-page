@@ -22,6 +22,11 @@ const loadAbout = () => {
   infoContent.style.color = 'white';
   infoContent.style.fontFamily = 'Abril Fatface';
 
+  infoContent.style.display = 'flex';
+  infoContent.style.flexDirection = 'column';
+  infoContent.style.alignContent = 'center';
+  infoContent.style.flexWrap = 'wrap';
+
   aboutContent.append(infoContent);
   infoContent.append(address, telNumber, image);
   content.append(aboutContent);
