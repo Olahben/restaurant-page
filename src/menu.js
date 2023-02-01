@@ -66,6 +66,13 @@ const loadMenu = () => {
 
     `;
   });
+
+  const mealNames = document.querySelectorAll('p');
+  mealNames.forEach((name) => {
+    name.style.cssText = `font-size: 24px;
+    color: grey;
+    `;
+  });
 };
 
 export default loadMenu;
