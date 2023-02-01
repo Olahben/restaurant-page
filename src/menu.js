@@ -48,6 +48,10 @@ const loadMenu = () => {
   meal6.textContent = 'Tomato sauce, pepperoni, mozarella, thick crust';
   meal6.appendChild(meal6Name);
 
+  menu.style.display = 'grid';
+  menu.style.gridTemplateColumns = 'repeat(1, minmax(200px, 1fr))';
+  menu.style.gridTemplateRows = 'repeat(6, minmax(150px, 1fr))';
+
   menu.append(meal1, meal2, meal3, meal4, meal5, meal6);
   menuContent.append(menu);
   content.append(menuContent);
