@@ -55,6 +55,17 @@ const loadMenu = () => {
   menu.append(meal1, meal2, meal3, meal4, meal5, meal6);
   menuContent.append(menu);
   content.append(menuContent);
+
+  const meals = document.querySelectorAll('.meal');
+  meals.forEach((meal) => {
+    meal.style.cssText = `background-color: #F4EEFF;
+     display: flex;
+     flex-direction: column;
+
+     font-family: 'Abril FatFace';
+
+    `;
+  });
 };
 
 export default loadMenu;
