@@ -49,8 +49,12 @@ const loadMenu = () => {
   meal6.appendChild(meal6Name);
 
   menu.style.display = 'grid';
-  menu.style.gridTemplateColumns = 'repeat(1, minmax(200px, 1fr))';
-  menu.style.gridTemplateRows = 'repeat(6, minmax(150px, 1fr))';
+  menu.style.gridTemplateColumns = 'repeat(1, minmax(300px, 1fr))';
+  menu.style.gridTemplateRows = 'repeat(6, minmax(200px, 1fr))';
+  menu.style.gap = '3vw';
+  menu.style.placeContent = 'center';
+  menu.style.paddingLeft = '30%';
+  menu.style.paddingRight = '30%';
 
   menu.append(meal1, meal2, meal3, meal4, meal5, meal6);
   menuContent.append(menu);
