@@ -65,8 +65,14 @@ const loadMenu = () => {
     meal.style.cssText = `background-color: #F4EEFF;
      display: flex;
      flex-direction: column;
+     margin-top: 5%;
+     padding-left: 5%;
+     padding-right: 10%;
+     
 
      font-family: 'Abril FatFace';
+
+     border-radius: 8px;
 
     `;
   });
